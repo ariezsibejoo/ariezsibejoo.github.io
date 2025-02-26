@@ -3,113 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Portofolio</title>
+    <title>CV Kang Ngecor</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome CDN untuk ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="bg-green-100 font-sans flex min-h-screen">
-    <div class="flex w-full">
-        <!-- Kolom 1: Navbar Vertikal -->
-        <div class="w-16 md:w-20 bg-white shadow-lg flex flex-col items-center py-6 space-y-6">
-            <button class="nav-btn p-3 hover:bg-blue-200 rounded-full transition duration-300" data-section="about" title="About">
-                <i class="fas fa-user text-xl md:text-2xl"></i>
+    <div class="flex w-full flex-col">
+        <!-- Navbar Horizontal Sticky di Mobile -->
+        <nav class="w-full bg-white shadow-lg p-4 fixed top-0 z-50 md:hidden flex justify-around items-center">
+            <button class="nav-btn p-2 hover:bg-blue-200 rounded-full transition duration-300" data-section="about" title="About">
+                <i class="fas fa-user text-xl"></i>
             </button>
-            <button class="nav-btn p-3 hover:bg-blue-200 rounded-full transition duration-300" data-section="portfolio" title="Portfolio">
-                <i class="fas fa-briefcase text-xl md:text-2xl"></i>
+            <button class="nav-btn p-2 hover:bg-blue-200 rounded-full transition duration-300" data-section="portfolio" title="Portfolio">
+                <i class="fas fa-briefcase text-xl"></i>
             </button>
-            <button class="nav-btn p-3 hover:bg-blue-200 rounded-full transition duration-300" data-section="contact" title="Contact">
-                <i class="fas fa-envelope text-xl md:text-2xl"></i>
+            <button class="nav-btn p-2 hover:bg-blue-200 rounded-full transition duration-300" data-section="contact" title="Contact">
+                <i class="fas fa-envelope text-xl"></i>
             </button>
-        </div>
+        </nav>
 
-        <!-- Kolom 2: Foto Profil Besar (1/3 Halaman) -->
-        <div class="w-1/3 md:w-1/3 bg-white shadow-lg p-6 flex flex-col items-center justify-center border-r border-gray-200">
-            <img src="oplos.jpeg" alt="Foto Profil" class="w-full h-auto max-h-[70vh] object-cover rounded-lg shadow-md mb-4">
-            <h1 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Mr. Dolorem</h1>
-            <p class="text-gray-600 mb-4">Tukang Ngecor</p>
-            <div class="flex space-x-4 mb-6">
-                <a href="#" class="text-gray-600 hover:text-blue-500 transition duration-300">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="text-gray-600 hover:text-blue-500 transition duration-300">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="text-gray-600 hover:text-blue-500 transition duration-300">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="#" class="text-gray-600 hover:text-blue-500 transition duration-300">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-            <!-- <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300 mb-2">
-                Download CV
-            </button> -->
-            <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition duration-300">
-                Contact Me
-            </button>
-        </div>
-
-        <!-- Kolom 3: Konten Halaman -->
-        <div class="w-2/3 md:w-2/3 p-6 bg-white shadow-lg">
-            <!-- About -->
-            <div id="about" class="section hidden bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                    <i class="fas fa-user"></i> About
-                </h2>
-                <p class="text-gray-700">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia atque molestiae culpa voluptatum esse. Alias ut sed provident. Illo qui mollitia beatae tempore a explicabo et harum dolorem officiis maxime dolore earum officia, soluta nihil quos sapiente sunt labore! Nobis, nostrum, vitae minima corrupti impedit error dolorem ut fugiat unde illo accusamus odio nisi aliquam iure. Recusandae esse sed porro minima mollitia odit modi hic minus dolores quidem, deserunt debitis eligendi earum maxime delectus officia veritatis exercitationem accusamus saepe explicabo. Quis, dicta natus aperiam tempore unde nesciunt doloremque. Eaque esse beatae, provident consequatur maiores facilis dolor voluptatum eum ipsum quam.<br>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos autem quam cum vel hic quae praesentium non, magni enim dolore? Accusantium laborum eligendi recusandae dolorem iste minima dolores tenetur fuga.
-                </p>
+        <div class="flex w-full flex-col md:flex-row mt-16 md:mt-0"> <!-- Margin top di mobile untuk navbar sticky -->
+            <!-- Kolom 1: Navbar Vertikal (Hanya untuk Tablet/Desktop) -->
+            <div class="hidden md:block md:w-16 lg:w-20 bg-white shadow-lg flex flex-col items-center justify-center py-6 space-y-6 md:h-screen md:sticky md:top-0">
+                <button class="nav-btn p-3 hover:bg-blue-200 rounded-full transition duration-300" data-section="about" title="About">
+                    <i class="fas fa-user text-xl md:text-2xl"></i>
+                </button>
+                <button class="nav-btn p-3 hover:bg-blue-200 rounded-full transition duration-300" data-section="portfolio" title="Portfolio">
+                    <i class="fas fa-briefcase text-xl md:text-2xl"></i>
+                </button>
+                <button class="nav-btn p-3 hover:bg-blue-200 rounded-full transition duration-300" data-section="contact" title="Contact">
+                    <i class="fas fa-envelope text-xl md:text-2xl"></i>
+                </button>
             </div>
 
-            <!-- Portfolio -->
-            <div id="portfolio" class="section hidden bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                    <i class="fas fa-briefcase"></i> Portfolio
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Card Portfolio 1 -->
-                    <a href="https://example.com/proyek1" target="_blank" class="portfolio-card bg-gray-50 p-4 rounded-lg shadow-md hover:bg-blue-50 hover:shadow-lg transition duration-300 flex items-center gap-2">
-                        <i class="fas fa-code text-blue-500"></i>
-                        <div>
-                            <h3 class="font-semibold text-gray-800">Proyek 1</h3>
-                            <p class="text-gray-600 text-sm">Website Portofolio Pribadi</p>
-                        </div>
+            <!-- Kolom 2: Foto Profil Besar -->
+            <div class="w-full md:w-1/3 lg:w-1/3 bg-white shadow-lg p-4 md:p-6 flex flex-col items-center justify-center border-r border-gray-200">
+                <img src="oplos.jpeg" alt="Foto Profil" class="w-full h-auto max-h-[70vh] md:max-h-[60vh] lg:max-h-[70vh] object-cover rounded-lg shadow-md mb-4">
+                <h1 class="text-lg md:text-xl lg:text-2xl font-bold text-gray-800 mb-2 text-center">Mas Dolorem</h1>
+                <p class="text-sm md:text-base lg:text-lg text-gray-600 mb-4 text-center">Kang Ngecor</p>
+                <div class="flex flex-wrap justify-center space-x-2 md:space-x-4 mb-6">
+                    <a href="#" class="text-sm md:text-base lg:text-lg text-gray-600 hover:text-blue-500 transition duration-300">
+                        <i class="fab fa-facebook-f"></i>
                     </a>
-
-                    <!-- Card Portfolio 2 -->
-                    <a href="https://example.com/proyek2" target="_blank" class="portfolio-card bg-gray-50 p-4 rounded-lg shadow-md hover:bg-blue-50 hover:shadow-lg transition duration-300 flex items-center gap-2">
-                        <i class="fas fa-laptop text-blue-500"></i>
-                        <div>
-                            <h3 class="font-semibold text-gray-800">Proyek 2</h3>
-                            <p class="text-gray-600 text-sm">Aplikasi Mobile To-Do</p>
-                        </div>
+                    <a href="#" class="text-sm md:text-base lg:text-lg text-gray-600 hover:text-blue-500 transition duration-300">
+                        <i class="fab fa-twitter"></i>
                     </a>
-
-                    <!-- Card Portfolio 3 -->
-                    <a href="https://example.com/proyek3" target="_blank" class="portfolio-card bg-gray-50 p-4 rounded-lg shadow-md hover:bg-blue-50 hover:shadow-lg transition duration-300 flex items-center gap-2">
-                        <i class="fas fa-paint-brush text-blue-500"></i>
-                        <div>
-                            <h3 class="font-semibold text-gray-800">Proyek 3</h3>
-                            <p class="text-gray-600 text-sm">Desain UI/UX Dashboard</p>
-                        </div>
+                    <a href="#" class="text-sm md:text-base lg:text-lg text-gray-600 hover:text-blue-500 transition duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-sm md:text-base lg:text-lg text-gray-600 hover:text-blue-500 transition duration-300">
+                        <i class="fab fa-instagram"></i>
                     </a>
                 </div>
+                <!-- <button class="bg-blue-500 text-white px-3 md:px-4 py-2 md:py-2 rounded-lg hover:bg-blue-600 transition duration-300 mb-2 text-sm md:text-base">
+                    Download CV
+                </button> -->
+                <button class="bg-gray-200 text-gray-800 px-3 md:px-4 py-2 md:py-2 rounded-lg hover:bg-gray-300 transition duration-300 text-sm md:text-base">
+                    Contact Me
+                </button>
             </div>
 
-            <!-- Contact -->
-            <div id="contact" class="section hidden bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                    <i class="fas fa-envelope"></i> Contact
-                </h2>
-                <p class="text-gray-700">Email: <span id="email">mrdolorem@yahoomail.com</span></p>
-                <p class="text-gray-700">Telepon: +626262626262</p>
-                <p class="text-gray-700">Alamat: Jl. Jalan yuk</p>
-                <button id="copy-email" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 flex items-center gap-2">
-                    <i class="fas fa-copy"></i> Salin Email
-                </button>
+            <!-- Kolom 3: Konten Halaman -->
+            <div class="w-full md:w-2/3 lg:w-2/3 p-4 md:p-6 bg-white shadow-lg">
+                <!-- About -->
+                <div id="about" class="section hidden bg-white p-4 md:p-6 rounded-lg shadow-md">
+                    <h2 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-3 md:mb-4 flex items-center gap-2">
+                        <i class="fas fa-user"></i> About
+                    </h2>
+                    <p class="text-sm md:text-base lg:text-lg text-gray-700">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quibusdam omnis fuga nesciunt non sapiente quam necessitatibus sequi veniam eius impedit cum commodi pariatur dicta earum qui, corporis a iure harum facere eos voluptate! Soluta nisi officia cumque dolore consequatur quas hic, quaerat eum a culpa reiciendis, labore, veritatis ipsam?
+                    </p>
+                </div>
+
+                <!-- Portfolio -->
+                <div id="portfolio" class="section hidden bg-white p-4 md:p-6 rounded-lg shadow-md">
+                    <h2 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-3 md:mb-4 flex items-center gap-2">
+                        <i class="fas fa-briefcase"></i> Portfolio
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                        <!-- Card Portfolio 1 -->
+                        <a href="https://example.com/proyek1" target="_blank" class="portfolio-card bg-gray-50 p-3 md:p-4 rounded-lg shadow-md hover:bg-blue-50 hover:shadow-lg transition duration-300 flex items-center gap-2">
+                            <i class="fas fa-code text-blue-500 text-lg md:text-xl"></i>
+                            <div>
+                                <h3 class="font-semibold text-sm md:text-base lg:text-lg text-gray-800">Proyek 1</h3>
+                                <p class="text-xs md:text-sm lg:text-base text-gray-600">Website Portofolio Pribadi</p>
+                            </div>
+                        </a>
+
+                        <!-- Card Portfolio 2 -->
+                        <a href="https://example.com/proyek2" target="_blank" class="portfolio-card bg-gray-50 p-3 md:p-4 rounded-lg shadow-md hover:bg-blue-50 hover:shadow-lg transition duration-300 flex items-center gap-2">
+                            <i class="fas fa-laptop text-blue-500 text-lg md:text-xl"></i>
+                            <div>
+                                <h3 class="font-semibold text-sm md:text-base lg:text-lg text-gray-800">Proyek 2</h3>
+                                <p class="text-xs md:text-sm lg:text-base text-gray-600">Aplikasi Mobile To-Do</p>
+                            </div>
+                        </a>
+
+                        <!-- Card Portfolio 3 -->
+                        <a href="https://example.com/proyek3" target="_blank" class="portfolio-card bg-gray-50 p-3 md:p-4 rounded-lg shadow-md hover:bg-blue-50 hover:shadow-lg transition duration-300 flex items-center gap-2">
+                            <i class="fas fa-paint-brush text-blue-500 text-lg md:text-xl"></i>
+                            <div>
+                                <h3 class="font-semibold text-sm md:text-base lg:text-lg text-gray-800">Proyek 3</h3>
+                                <p class="text-xs md:text-sm lg:text-base text-gray-600">Desain UI/UX Dashboard</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div id="contact" class="section hidden bg-white p-4 md:p-6 rounded-lg shadow-md">
+                    <h2 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-3 md:mb-4 flex items-center gap-2">
+                        <i class="fas fa-envelope"></i> Contact
+                    </h2>
+                    <p class="text-sm md:text-base lg:text-lg text-gray-700">Email: <span id="email">kangngecor.com.id</span></p>
+                    <p class="text-sm md:text-base lg:text-lg text-gray-700">Telepon: +62626262</p>
+                    <p class="text-sm md:text-base lg:text-lg text-gray-700">Alamat: Jl Jalan Yuk</p>
+                    <button id="copy-email" class="mt-3 md:mt-4 px-3 md:px-4 py-2 md:py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 flex items-center gap-2 text-sm md:text-base">
+                        <i class="fas fa-copy text-sm md:text-base"></i> Salin Email
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -149,9 +163,9 @@
         const email = document.getElementById('email').textContent;
         copyEmailBtn.addEventListener('click', () => {
             navigator.clipboard.writeText(email).then(() => {
-                copyEmailBtn.innerHTML = '<i class="fas fa-check"></i> Email Disalin!';
+                copyEmailBtn.innerHTML = '<i class="fas fa-check text-sm md:text-base"></i> Email Disalin!';
                 setTimeout(() => {
-                    copyEmailBtn.innerHTML = '<i class="fas fa-copy"></i> Salin Email';
+                    copyEmailBtn.innerHTML = '<i class="fas fa-copy text-sm md:text-base"></i> Salin Email';
                 }, 2000);
             }).catch(err => {
                 console.error('Gagal mensalin email:', err);
